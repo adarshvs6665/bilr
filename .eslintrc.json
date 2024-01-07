@@ -1,0 +1,37 @@
+{
+  "root": true,
+  "env": {
+      "es6": true,
+      "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "project": "./tsconfig.json",
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+  },
+  "plugins": ["prettier"],
+  "rules": {
+      "prettier/prettier": ["error", {
+          "singleQuote": true,
+          "printWidth": 125,
+          "arrowParens": "always",
+          "endOfLine": "auto",
+          "tabWidth": 4,
+          "trailingComma": "none"
+        }],
+      "semi": ["error", "always"], // Enforce semicolons at the end of statements
+      "quotes": ["error", "single"], // Enforce the use of single quotes for strings
+      "no-console": "off", // Disallow the use of console.log() and other console methods
+      "no-unused-vars": "off", // Disallow unused variables
+      "no-var": "error", // Disallow the use of var, enforce using let or const instead
+      "prefer-const": "error", // Enforce using const for variables that are not reassigned
+      "no-empty": "error", // Disallow empty block statements
+      "curly": "error", // Enforce the use of curly braces for control statements
+      "eqeqeq": "error", // Require strict equality checks (=== and !==)
+      "no-eval": "error", // Disallow the use of eval()
+      "no-trailing-spaces": "error", // Disallow trailing whitespace at the end of lines
+      "global-require": ["error"]
+  }
+}
