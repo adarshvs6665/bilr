@@ -56,138 +56,88 @@ export default function data() {
 
   return {
     columns: [
-      { Header: "companies", accessor: "companies", width: "45%", align: "left" },
-      { Header: "members", accessor: "members", width: "10%", align: "left" },
-      { Header: "budget", accessor: "budget", align: "center" },
-      { Header: "completion", accessor: "completion", align: "center" },
+      { Header: "Products", accessor: "product", width: "45%", align: "left" },
+      { Header: "Availability", accessor: "availability", width: "10%", align: "left" },
+      { Header: "Total Sales", accessor: "sale", align: "center" },
     ],
 
     rows: [
       {
-        companies: <Company image={logoXD} name="Material UI XD Version" />,
-        members: (
+        product: <Company image={logoXD} name="xd" />,
+        availability: (
           <MDBox display="flex" py={1}>
-            {avatars([
-              [team1, "Ryan Tompson"],
-              [team2, "Romina Hadid"],
-              [team3, "Alexander Smith"],
-              [team4, "Jessica Doe"],
-            ])}
+            504 in stock
           </MDBox>
         ),
-        budget: (
+        sale: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             $14,000
           </MDTypography>
         ),
-        completion: (
-          <MDBox width="8rem" textAlign="left">
-            <MDProgress value={60} color="info" variant="gradient" label={false} />
-          </MDBox>
-        ),
       },
       {
-        companies: <Company image={logoAtlassian} name="Add Progress Track" />,
-        members: (
+        product: <Company image={logoAtlassian} name="at" />,
+        availability: (
           <MDBox display="flex" py={1}>
-            {avatars([
-              [team2, "Romina Hadid"],
-              [team4, "Jessica Doe"],
-            ])}
+            86 in stock
           </MDBox>
         ),
-        budget: (
+        sale: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             $3,000
           </MDTypography>
         ),
-        completion: (
-          <MDBox width="8rem" textAlign="left">
-            <MDProgress value={10} color="info" variant="gradient" label={false} />
+      },
+      {
+        product: <Company image={logoAtlassian} name="at" />,
+        availability: (
+          <MDBox display="flex" py={1}>
+            86 in stock
           </MDBox>
+        ),
+        sale: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            $3,000
+          </MDTypography>
         ),
       },
       {
-        companies: <Company image={logoSlack} name="Fix Platform Errors" />,
-        members: (
+        product: <Company image={logoAtlassian} name="at" />,
+        availability: (
           <MDBox display="flex" py={1}>
-            {avatars([
-              [team1, "Ryan Tompson"],
-              [team3, "Alexander Smith"],
-            ])}
+            86 in stock
           </MDBox>
         ),
-        budget: (
+        sale: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            Not set
+            $3,000
           </MDTypography>
-        ),
-        completion: (
-          <MDBox width="8rem" textAlign="left">
-            <MDProgress value={100} color="success" variant="gradient" label={false} />
-          </MDBox>
         ),
       },
       {
-        companies: <Company image={logoSpotify} name="Launch our Mobile App" />,
-        members: (
+        product: <Company image={logoAtlassian} name="at" />,
+        availability: (
           <MDBox display="flex" py={1}>
-            {avatars([
-              [team4, "Jessica Doe"],
-              [team3, "Alexander Smith"],
-              [team2, "Romina Hadid"],
-              [team1, "Ryan Tompson"],
-            ])}
+            86 in stock
           </MDBox>
         ),
-        budget: (
+        sale: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            $20,500
+            $3,000
           </MDTypography>
-        ),
-        completion: (
-          <MDBox width="8rem" textAlign="left">
-            <MDProgress value={100} color="success" variant="gradient" label={false} />
-          </MDBox>
         ),
       },
       {
-        companies: <Company image={logoJira} name="Add the New Pricing Page" />,
-        members: (
+        product: <Company image={logoAtlassian} name="at" />,
+        availability: (
           <MDBox display="flex" py={1}>
-            {avatars([[team4, "Jessica Doe"]])}
+            86 in stock
           </MDBox>
         ),
-        budget: (
+        sale: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            $500
+            $3,000
           </MDTypography>
-        ),
-        completion: (
-          <MDBox width="8rem" textAlign="left">
-            <MDProgress value={25} color="info" variant="gradient" label={false} />
-          </MDBox>
-        ),
-      },
-      {
-        companies: <Company image={logoInvesion} name="Redesign New Online Shop" />,
-        members: (
-          <MDBox display="flex" py={1}>
-            {avatars([
-              [team1, "Ryan Tompson"],
-              [team4, "Jessica Doe"],
-            ])}
-          </MDBox>
-        ),
-        budget: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            $2,000
-          </MDTypography>
-        ),
-        completion: (
-          <MDBox width="8rem" textAlign="left">
-            <MDProgress value={40} color="info" variant="gradient" label={false} />
-          </MDBox>
         ),
       },
     ],

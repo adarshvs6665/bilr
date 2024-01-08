@@ -148,7 +148,7 @@ export default function App() {
       <Routes>
         {getRoutes(routes)}
         {getRoutesNotInNavbar(routesNotInNavbar)}
-        <Route path="*" element={<Navigate to="/authentication/sign-in" />} />
+        {/* <Route path="*" element={<Navigate to="/authentication/sign-in" />} /> */}
       </Routes>
     </ThemeProvider>
   );
