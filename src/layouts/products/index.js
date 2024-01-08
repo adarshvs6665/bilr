@@ -16,9 +16,19 @@ import DataTable from "examples/Tables/DataTable";
 import data from "./data/projectsTableData";
 import MDButton from "components/MDButton";
 import { Icon } from "@mui/material";
+import AddNewProduct from "./components/addUser";
+import React from "react";
 
 function Products() {
   const { columns, rows } = data();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <DashboardLayout>
       <DashboardNavbar />
@@ -44,10 +54,11 @@ function Products() {
                 <MDTypography variant="h6" color="white">
                   Product Table
                 </MDTypography>
-                <MDButton variant="gradient" color="light">
+                <MDButton variant="gradient" color="light" onClick={handleClickOpen}>
                   <Icon sx={{ fontWeight: "bold" }}>add</Icon>
                   &nbsp;add new product
                 </MDButton>
+                {open && <AddNewProduct handleClose={handleClose} />}
               </MDBox>
               <MDBox pt={3}>
                 <DataTable
