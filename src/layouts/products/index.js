@@ -66,6 +66,7 @@ function Products() {
                   isSorted={true}
                   entriesPerPage={{ defaultValue: 10, entries: [5, 10, 15, 20, 25] }}
                   showTotalEntries={true}
+                  canSearch={true}
                   noEndBorder
                 />
               </MDBox>
