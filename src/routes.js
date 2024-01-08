@@ -9,6 +9,7 @@ import SignUp from "layouts/authentication/sign-up";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import Products from "layouts/products";
 
 export const routes = [
   {
@@ -26,6 +27,14 @@ export const routes = [
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/tables",
     component: <Tables />,
+  },
+  {
+    type: "collapse",
+    name: "Products",
+    key: "products",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/products",
+    component: <Products />,
   },
   {
     type: "collapse",
